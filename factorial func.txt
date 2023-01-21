@@ -1,0 +1,8 @@
+ll N = 1e6;
+ll f[N];
+void factorial() {
+    f[0] = 1; 
+    for(ll i = 1; i < N; i++) {
+       f[i] = (((i % mod) * (f[i-1] % mod)) % mod);
+    }
+} 
